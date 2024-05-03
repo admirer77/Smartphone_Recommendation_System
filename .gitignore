@@ -1,0 +1,5 @@
+.virt_env
+chromedriver-win64
+API_Key.txt
+plan.txt
+virtual_env.txt
