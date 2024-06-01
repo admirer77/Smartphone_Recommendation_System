@@ -1,47 +1,32 @@
-# Mobile Specs Analysis and YouTube Rating Prediction
+# Smartphone Recommendation System Project
 
-## Project Overview
+## Overview
+This project aimed to create a smartphone recommendation system by collecting data from various sources and building a machine learning model using Random Forest. The system utilizes data from 91mobiles website for mobile specifications and YouTube API for likes/views ratio to determine YouTube ratings.
 
-This project aims to analyze mobile specifications and predict YouTube ratings based on likes and views using machine learning. The project involves web scraping, data collection, model training, and deployment via a Flask web application.
+## Project Steps
 
-## Table of Contents
+### 1. Data Collection
+- **91mobiles Website:** Data was collected by web scraping the 91mobiles website to gather mobile specifications.
+- **YouTube Data:** YouTube API was used with an API key to collect data on likes/views ratio for YouTube ratings.
 
-- [Mobile Specs Analysis and YouTube Rating Prediction](#mobile-specs-analysis-and-youtube-rating-prediction)
-  - [Project Overview](#project-overview)
-  - [Table of Contents](#table-of-contents)
-  - [Data Collection](#data-collection)
-    - [Mobile Specifications](#mobile-specifications)
-    - [YouTube Data](#youtube-data)
-  - [Machine Learning Model](#machine-learning-model)
-  - [Web Application](#web-application)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Contact](#contact)
+### 2. Data Preprocessing
+Before feeding the data into the machine learning model, several preprocessing steps were carried out:
+- Handling missing values
+- Data cleaning (removing duplicates, irrelevant data)
+- Feature engineering (creating new features, encoding categorical variables)
 
-## Data Collection
+### 3. Machine Learning Model
+A Random Forest machine learning model was chosen for its ability to handle large datasets and provide accurate predictions. The model was trained on the preprocessed data to predict smartphone ratings based on specifications and YouTube ratings.
 
-### Mobile Specifications
+### 4. Web Application
+The recommendation system was deployed using Flask to create a web interface where users can input their preferences and receive personalized smartphone recommendations.
 
-I collected data on mobile specifications by web scraping the 91mobiles website. This involved extracting various features such as model name, brand, specifications, price, etc.
+## Repository Structure
+- **data/**: Contains the collected and preprocessed data files.
+- **models/**: Includes the trained machine learning model.
+- **app.py**: Flask application for the web interface.
+- **requirements.txt**: Lists the required libraries and dependencies.
+- **README.md**: Instructions and overview of the project.
 
-### YouTube Data
-
-Using the YouTube Data API, I collected data on video likes and views. This data was used to calculate the likes/views ratio to serve as a YouTube rating metric.
-
-## Machine Learning Model
-
-A Random Forest model was created to predict the YouTube rating based on the collected mobile specifications and YouTube data. The model was trained and evaluated to ensure its accuracy and reliability.
-
-## Web Application
-
-The project includes a web application built with Flask. The web app provides an interface for users to input mobile specifications and view predicted YouTube ratings.
-
-## Installation
-
-To get a local copy up and running, follow these steps:
-
-1. **Clone the repository:**
-   ```sh
-   git clone https://github.com/admirer77/Smartphone_Recommendation_System.git
+## Usage
+1. Clone the repository:
