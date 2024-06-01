@@ -35,18 +35,19 @@ def predict():
     user_os = user_input.get('os')
     user_brand = user_input.get('Brand')
 
-    # Filter the dataset based on the OS input
-    filtered_data = data[data['os'] == user_os]
-
-    if filtered_data.empty:
-        return render_template('result.html', mobile=None, message=f"No mobiles found for OS: {user_os}")
+    # Filter the dataset based on the OS input if provided
+    if user_os:
+        filtered_data = data[data['os'] == user_os]
+    else:
+        filtered_data = data
 
     # Further filter the dataset based on the Brand input if provided
     if user_brand:
         filtered_data = filtered_data[filtered_data['Brand'] == user_brand]
 
+    # If the filtered data is empty, use the entire dataset
     if filtered_data.empty:
-        return render_template('result.html', mobile=None, message=f"No mobiles found for OS: {user_os} and Brand: {user_brand}")
+        filtered_data = data
 
     # Define the features and target
     categorical_features = ['OS', 'Brand', 'Core', 'Processor', 'Display Type', 'Display Size', 'Camera Details', 'Flash Type', 'Screen flash', 'Fast charging', 'Type-C', 'os']
