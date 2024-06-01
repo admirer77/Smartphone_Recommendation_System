@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Recommendation</title>
+</head>
+<body>
+    <h1>Mobile Specification Input</h1>
+    <form action="/predict" method="post">
+        <!-- Add input fields for all the categorical and numerical features except 'Final Rating', '91 mobiles rating', 'youtube rating', 'Name' -->
+        OS: <input type="text" name="OS"><br>
+        Brand: <input type="text" name="Brand"><br>
+        Core: <input type="text" name="Core"><br>
+        Processor: <input type="text" name="Processor"><br>
+        Display Type: <input type="text" name="Display Type"><br>
+        Display Size: <input type="text" name="Display Size"><br>
+        Camera Details: <input type="text" name="Camera Details"><br>
+        Flash Type: <input type="text" name="Flash Type"><br>
+        Screen flash: <input type="text" name="Screen flash"><br>
+        Fast charging: <input type="text" name="Fast charging"><br>
+        Type-C: <input type="text" name="Type-C"><br>
+        os: <input type="text" name="os"><br>
+        Price: <input type="number" name="Price"><br>
+        Battery: <input type="number" name="Battery"><br>
+        Refresh Rate: <input type="number" name="Refresh Rate"><br>
+        RAM: <input type="number" name="RAM"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

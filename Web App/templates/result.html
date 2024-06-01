@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Recommendation Result</title>
+</head>
+<body>
+    <h1>Recommended Mobile</h1>
+    {% if mobile %}
+        <p><strong>Name:</strong> {{ mobile['Name'] }}</p>
+        <p><strong>OS:</strong> {{ mobile['OS'] }}</p>
+        <p><strong>Brand:</strong> {{ mobile['Brand'] }}</p>
+        <p><strong>Core:</strong> {{ mobile['Core'] }}</p>
+        <p><strong>Processor:</strong> {{ mobile['Processor'] }}</p>
+        <p><strong>Display Type:</strong> {{ mobile['Display Type'] }}</p>
+        <p><strong>Display Size:</strong> {{ mobile['Display Size'] }}</p>
+        <p><strong>Camera Details:</strong> {{ mobile['Camera Details'] }}</p>
+        <p><strong>Flash Type:</strong> {{ mobile['Flash Type'] }}</p>
+        <p><strong>Screen flash:</strong> {{ mobile['Screen flash'] }}</p>
+        <p><strong>Fast charging:</strong> {{ mobile['Fast charging'] }}</p>
+        <p><strong>Type-C:</strong> {{ mobile['Type-C'] }}</p>
+        <p><strong>OS:</strong> {{ mobile['os'] }}</p>
+        <p><strong>Price:</strong> {{ mobile['Price'] }}</p>
+        <p><strong>Battery:</strong> {{ mobile['Battery'] }}</p>
+        <p><strong>Refresh Rate:</strong> {{ mobile['Refresh Rate'] }}</p>
+        <p><strong>RAM:</strong> {{ mobile['RAM'] }}</p>
+        <p><strong>Final Rating:</strong> {{ mobile['Final Rating'] }}</p>
+    {% else %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
