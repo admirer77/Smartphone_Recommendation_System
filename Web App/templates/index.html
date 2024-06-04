@@ -2,27 +2,80 @@
 <html>
 <head>
     <title>Mobile Recommendation</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
 </head>
 <body>
-    <h1>Mobile Specification Input</h1>
-    <form action="/predict" method="post">
-        OS: <input type="text" name="OS"><br>
-        Brand: <input type="text" name="Brand"><br>
-        Core: <input type="text" name="Core"><br>
-        Processor: <input type="text" name="Processor"><br>
-        Display Type: <input type="text" name="Display Type"><br>
-        Display Size: <input type="text" name="Display Size"><br>
-        Camera Details: <input type="text" name="Camera Details"><br>
-        Flash Type: <input type="text" name="Flash Type"><br>
-        Screen flash: <input type="text" name="Screen flash"><br>
-        Fast charging: <input type="text" name="Fast charging"><br>
-        Type-C: <input type="text" name="Type-C"><br>
-        os: <input type="text" name="os"><br>
-        Price: <input type="number" name="Price"><br>
-        Battery: <input type="number" name="Battery"><br>
-        Refresh Rate: <input type="number" name="Refresh Rate"><br>
-        RAM: <input type="number" name="RAM"><br>
-        <input type="submit" value="Submit">
-    </form>
+    <div>
+        <h1>Mobile Specification Input</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="OS">OS:</label>
+                <input type="text" name="OS" id="OS">
+            </div>
+            <div class="form-group">
+                <label for="Brand">Brand:</label>
+                <input type="text" name="Brand" id="Brand">
+            </div>
+            <div class="form-group">
+                <label for="Core">Core:</label>
+                <input type="text" name="Core" id="Core">
+            </div>
+            <div class="form-group">
+                <label for="Processor">Processor:</label>
+                <input type="text" name="Processor" id="Processor">
+            </div>
+            <div class="form-group">
+                <label for="DisplayType">Display Type:</label>
+                <input type="text" name="Display Type" id="DisplayType">
+            </div>
+            <div class="form-group">
+                <label for="DisplaySize">Display Size:</label>
+                <input type="text" name="Display Size" id="DisplaySize">
+            </div>
+            <div class="form-group">
+                <label for="CameraDetails">Camera Details:</label>
+                <input type="text" name="Camera Details" id="CameraDetails">
+            </div>
+            <div class="form-group">
+                <label for="FlashType">Flash Type:</label>
+                <input type="text" name="Flash Type" id="FlashType">
+            </div>
+            <div class="form-group">
+                <label for="ScreenFlash">Screen flash:</label>
+                <input type="text" name="Screen flash" id="ScreenFlash">
+            </div>
+            <div class="form-group">
+                <label for="FastCharging">Fast charging:</label>
+                <input type="text" name="Fast charging" id="FastCharging">
+            </div>
+            <div class="form-group">
+                <label for="TypeC">Type-C:</label>
+                <input type="text" name="Type-C" id="TypeC">
+            </div>
+            <div class="form-group">
+                <label for="os">os:</label>
+                <input type="text" name="os" id="os">
+            </div>
+            <div class="form-group">
+                <label for="Price">Price:</label>
+                <input type="number" name="Price" id="Price">
+            </div>
+            <div class="form-group">
+                <label for="Battery">Battery:</label>
+                <input type="number" name="Battery" id="Battery">
+            </div>
+            <div class="form-group">
+                <label for="RefreshRate">Refresh Rate:</label>
+                <input type="number" name="Refresh Rate" id="RefreshRate">
+            </div>
+            <div class="form-group">
+                <label for="RAM">RAM:</label>
+                <input type="number" name="RAM" id="RAM">
+            </div>
+            <div style="width: 100%;">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
 </body>
 </html>
