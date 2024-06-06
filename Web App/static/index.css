@@ -15,7 +15,7 @@ h1 {
 form {
     background-color: #1f1f1f;
     border-radius: 10px;
-    padding: 20px;
+    padding: 30px;
     width: 800px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
@@ -23,8 +23,45 @@ form {
     gap: 20px;
 }
 .form-group {
-    width: 30%;
+    width: 31.6%;
 }
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140"><polygon points="70,100 30,60 110,60" fill="%23e0e0e0"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px;
+}
+
+select:hover {
+    border-color: #555555;
+}
+
+select:focus {
+    outline: none;
+    border-color: #ef3e6e;
+    box-shadow: 0 0 5px rgba(232, 26, 95, 0.5);
+}
+
+/* Custom dropdown styling for options */
+select option {
+    background-color: #292929;
+    color: #e0e0e0;
+}
+select option:checked {
+    background-color: #f03e64;
+}
+
+
 form input[type="text"], form input[type="number"] {
     width: calc(100% - 22px);
     padding: 10px;
@@ -32,6 +69,13 @@ form input[type="text"], form input[type="number"] {
     border-radius: 5px;
     background-color: #292929;
     color: #e0e0e0;
+}
+form input[type="text"]:focus {
+    border-color: #ef3e6e;
+    box-shadow: 0 0 5px rgba(232, 26, 95, 0.5);
+}
+form input[type="text"]:hover {
+    border-color: #555555;
 }
 form input[type="submit"] {
     width: 100%;
@@ -42,10 +86,10 @@ form input[type="submit"] {
     color: #e0e0e0;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 form input[type="submit"]:hover {
     background: linear-gradient(45deg,#ff649d,#c44c34);
+    box-shadow: 0px 0px 10px rgb(140, 49, 94);
 }
 label {
     display: block;

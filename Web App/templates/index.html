@@ -8,70 +8,312 @@
     <div>
         <h1>Mobile Specification Input</h1>
         <form action="/predict" method="post">
-            <div class="form-group">
-                <label for="OS">OS:</label>
-                <input type="text" name="OS" id="OS">
-            </div>
-            <div class="form-group">
-                <label for="Brand">Brand:</label>
-                <input type="text" name="Brand" id="Brand">
-            </div>
-            <div class="form-group">
-                <label for="Core">Core:</label>
-                <input type="text" name="Core" id="Core">
-            </div>
-            <div class="form-group">
-                <label for="Processor">Processor:</label>
-                <input type="text" name="Processor" id="Processor">
-            </div>
-            <div class="form-group">
-                <label for="DisplayType">Display Type:</label>
-                <input type="text" name="Display Type" id="DisplayType">
-            </div>
-            <div class="form-group">
-                <label for="DisplaySize">Display Size:</label>
-                <input type="text" name="Display Size" id="DisplaySize">
-            </div>
-            <div class="form-group">
-                <label for="CameraDetails">Camera Details:</label>
-                <input type="text" name="Camera Details" id="CameraDetails">
-            </div>
-            <div class="form-group">
-                <label for="FlashType">Flash Type:</label>
-                <input type="text" name="Flash Type" id="FlashType">
-            </div>
-            <div class="form-group">
-                <label for="ScreenFlash">Screen flash:</label>
-                <input type="text" name="Screen flash" id="ScreenFlash">
-            </div>
-            <div class="form-group">
-                <label for="FastCharging">Fast charging:</label>
-                <input type="text" name="Fast charging" id="FastCharging">
-            </div>
-            <div class="form-group">
-                <label for="TypeC">Type-C:</label>
-                <input type="text" name="Type-C" id="TypeC">
-            </div>
-            <div class="form-group">
-                <label for="os">os:</label>
-                <input type="text" name="os" id="os">
-            </div>
+
             <div class="form-group">
                 <label for="Price">Price:</label>
                 <input type="number" name="Price" id="Price">
             </div>
+
             <div class="form-group">
-                <label for="Battery">Battery:</label>
-                <input type="number" name="Battery" id="Battery">
+                <label for="Brand">Brand:</label>
+                <select name="Brand" id="Brand">
+                    <option disabled selected value="">Select</option>
+                    <option value="OnePlus">OnePlus</option>
+                    <option value="Realme">Realme</option>
+                    <option value="Redmi">Redmi</option>
+                    <option value="Samsung">Samsung</option>
+                    <option value="Vivo">Vivo</option>
+                    <option value="Apple">Apple</option>
+                </select>
             </div>
+
             <div class="form-group">
-                <label for="RefreshRate">Refresh Rate:</label>
-                <input type="number" name="Refresh Rate" id="RefreshRate">
+                <label for="Processor">Processor:</label>
+                <select name="Processor" id="Processor">
+                    <option disabled selected value="">Select</option>
+                    <option value="Snapdragon 7 Gen 3">Snapdragon 7 Gen 3</option>
+                    <option value="Snapdragon 8 Gen 2">Snapdragon 8 Gen 2</option>
+                    <option value="Snapdragon 695">Snapdragon 695</option>
+                    <option value="Snapdragon 8 Gen 3">Snapdragon 8 Gen 3</option>
+                    <option value="Snapdragon 782G">Snapdragon 782G</option>
+                    <option value="Snapdragon 8 Plus Gen 1">Snapdragon 8 Plus Gen 1</option>
+                    <option value="MediaTek Dimensity 9000">MediaTek Dimensity 9000</option>
+                    <option value="MediaTek Dimensity 1300">MediaTek Dimensity 1300</option>
+                    <option value="Snapdragon 8 Gen 1">Snapdragon 8 Gen 1</option>
+                    <option value="MediaTek Dimensity 8100 Max">MediaTek Dimensity 8100 Max</option>
+                    <option value="Snapdragon 870">Snapdragon 870</option>
+                    <option value="MediaTek Dimensity 900">MediaTek Dimensity 900</option>
+                    <option value="MediaTek Dimensity 7050">MediaTek Dimensity 7050</option>
+                    <option value="Snapdragon 7s Gen 2">Snapdragon 7s Gen 2</option>
+                    <option value="Snapdragon 6 Gen 1">Snapdragon 6 Gen 1</option>
+                    <option value="MediaTek Dimensity 6300">MediaTek Dimensity 6300</option>
+                    <option value="MediaTek Dimensity 6020">MediaTek Dimensity 6020</option>
+                    <option value="MediaTek Dimensity 6100 Plus">MediaTek Dimensity 6100 Plus</option>
+                    <option value="Unisoc T612">Unisoc T612</option>
+                    <option value="MediaTek Helio G99">MediaTek Helio G99</option>
+                    <option value="MediaTek Dimensity 6080">MediaTek Dimensity 6080</option>
+                    <option value="Snapdragon 4 Gen 2">Snapdragon 4 Gen 2</option>
+                    <option value="MediaTek Dimensity 7200 Ultra">MediaTek Dimensity 7200 Ultra</option>
+                    <option value="MediaTek Helio G85">MediaTek Helio G85</option>
+                    <option value="Snapdragon 4 Gen 1">Snapdragon 4 Gen 1</option>
+                    <option value="Snapdragon 685">Snapdragon 685</option>
+                    <option value="MediaTek Dimensity 1080">MediaTek Dimensity 1080</option>
+                    <option value="MediaTek Helio G88">MediaTek Helio G88</option>
+                    <option value="MediaTek Dimensity 8100">MediaTek Dimensity 8100</option>
+                    <option value="MediaTek Helio G96">MediaTek Helio G96</option>
+                    <option value="MediaTek Helio G36">MediaTek Helio G36</option>
+                    <option value="Snapdragon 7 Gen 1">Snapdragon 7 Gen 1</option>
+                    <option value="Samsung Exynos 1480">Samsung Exynos 1480</option>
+                    <option value="Samsung Exynos 1380">Samsung Exynos 1380</option>
+                    <option value="Samsung Exynos 1280">Samsung Exynos 1280</option>
+                    <option value="Samsung Exynos 2400">Samsung Exynos 2400</option>
+                    <option value="Samsung Exynos 2200">Samsung Exynos 2200</option>
+                    <option value="Samsung Exynos 1330">Samsung Exynos 1330</option>
+                    <option value="Samsung Exynos 2100">Samsung Exynos 2100</option>
+                    <option value="Snapdragon 888">Snapdragon 888</option>
+                    <option value="MediaTek Dimensity 7200">MediaTek Dimensity 7200</option>
+                    <option value="Snapdragon 778G">Snapdragon 778G</option>
+                    <option value="MediaTek Dimensity 8200">MediaTek Dimensity 8200</option>
+                    <option value="MediaTek Dimensity 9300">MediaTek Dimensity 9300</option>
+                    <option value="Apple A17 Pro">Apple A17 Pro</option>
+                    <option value="Apple A16 Bionic">Apple A16 Bionic</option>
+                    <option value="Apple A15 Bionic">Apple A15 Bionic</option>
+                    <option value="Apple A13 Bionic">Apple A13 Bionic</option>
+                    <option value="Apple A14 Bionic">Apple A14 Bionic</option>
+                    <option value="Apple A12 Bionic">Apple A12 Bionic</option>
+                </select>
             </div>
+
             <div class="form-group">
                 <label for="RAM">RAM:</label>
                 <input type="number" name="RAM" id="RAM">
             </div>
+
+            <div class="form-group">
+                <label for="os">Operating System:</label>
+                <select name="os" id="os">
+                    <option disabled selected value="">Select</option>
+                    <option value="Android">Android</option>
+                    <option value="Apple">Apple</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="OS">OS Version:</label>
+                <select name="OS" id="OS">
+                    <option disabled selected value="">Select</option>
+                    <option value="Android v14">Android v14</option>
+                    <option value="Android v13">Android v13</option>
+                    <option value="Android v12">Android v12</option>
+                    <option value="Android v11">Android v11</option>
+                    <option value="iOS v17">iOS v17</option>
+                    <option value="iOS v16">iOS v16</option>
+                    <option value="iOS v15">iOS v15</option>
+                    <option value="iOS v14">iOS v14</option>
+                    <option value="iOS v13">iOS v13</option>
+                    <option value="iOS v12">iOS v12</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="Battery">Battery:</label>
+                <input type="number" name="Battery" id="Battery">
+            </div>
+            
+            <div class="form-group">
+                <label for="FastCharging">Fast charging:</label>
+                <select name="Fast charging" id="FastCharging">
+                    <option disabled selected value="">Select</option>
+                    <option value="Fast Charging">Fast Charging</option>
+                    <option value="Super VOOC Charging">Super VOOC Charging</option>
+                    <option value="Warp Charging">Warp Charging</option>
+                    <option value="Quick Charging">Quick Charging</option>
+                    <option value="Turbo Charging">Turbo Charging</option>
+                    <option value="Hyper Charging">Hyper Charging</option>
+                    <option value="No Quick Charging">No Quick Charging</option>
+                    <option value="Flash Charging">Flash Charging</option>
+                    <option value="USB Type-C Port">USB Type-C Port</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="TypeC">Charging Port:</label>
+                <select name="Type-C" id="TypeC">
+                    <option disabled selected value="">Select</option>
+                    <option value="Lightning Port">Lightning Port</option>
+                    <option value="USB Type-C Port">USB Type-C Port</option>
+                    <option value="Micro-USB Port">Micro-USB Port</option>
+                    <option value="Non-Removable">Non-Removable</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="RefreshRate">Refresh Rate:</label>
+                <input type="number" name="Refresh Rate" id="RefreshRate">
+            </div>
+
+            <div class="form-group">
+                <label for="CameraDetails">Camera Details:</label>
+                <select name="CameraDetails" id="CameraDetails">
+                    <option disabled selected value="">Select</option>
+                    <option value="50 MP + 8 MP Dual Primary Cameras">50 MP + 8 MP Dual Primary Cameras</option>
+                    <option value="50 MP + 8 MP + 2 MP Triple Primary Cameras">50 MP + 8 MP + 2 MP Triple Primary Cameras</option>
+                    <option value="108 MP + 2 MP + 2 MP Triple Primary Cameras">108 MP + 2 MP + 2 MP Triple Primary Cameras</option>
+                    <option value="50 MP + 48 MP + 64 MP Triple Primary Cameras">50 MP + 48 MP + 64 MP Triple Primary Cameras</option>
+                    <option value="50 MP + 48 MP + 32 MP Triple Primary Cameras">50 MP + 48 MP + 32 MP Triple Primary Cameras</option>
+                    <option value="48 MP + 48 MP + 64 MP Triple Primary Cameras">48 MP + 48 MP + 64 MP Triple Primary Cameras</option>
+                    <option value="64 MP + 2 MP + 2 MP Triple Primary Cameras">64 MP + 2 MP + 2 MP Triple Primary Cameras</option>
+                    <option value="48 MP + 50 MP + 8 MP Triple Primary Cameras">48 MP + 50 MP + 8 MP Triple Primary Cameras</option>
+                    <option value="48 + 16 + 5 + 2 MP Quad Primary Cameras">48 + 16 + 5 + 2 MP Quad Primary Cameras</option>
+                    <option value="64 MP + 8 MP + 2 MP Triple Primary Cameras">64 MP + 8 MP + 2 MP Triple Primary Cameras</option>
+                    <option value="50 MP + 2 MP Dual Primary Cameras">50 MP + 2 MP Dual Primary Cameras</option>
+                    <option value="50 MP + 8 MP + 64 MP Triple Primary Cameras">50 MP + 8 MP + 64 MP Triple Primary Cameras</option>
+                    <option value="50 MP + 8 MP + 32 MP Triple Primary Cameras">50 MP + 8 MP + 32 MP Triple Primary Cameras</option>
+                    <option value="50 MP Dual Primary Cameras">50 MP Dual Primary Cameras</option>
+                    <option value="64 MP + 2 MP Dual Primary Cameras">64 MP + 2 MP Dual Primary Cameras</option>
+                    <option value="108 MP Dual Primary Cameras">108 MP Dual Primary Cameras</option>
+                    <option value="100 MP + 2 MP Dual Primary Cameras">100 MP + 2 MP Dual Primary Cameras</option>
+                    <option value="200 MP + 8 MP + 2 MP Triple Primary Cameras">200 MP + 8 MP + 2 MP Triple Primary Cameras</option>
+                    <option value="108 MP + 8 MP + 2 MP Triple Primary Cameras">108 MP + 8 MP + 2 MP Triple Primary Cameras</option>
+                    <option value="50 + 50 + 50 + 50 MP Quad Primary Cameras">50 + 50 + 50 + 50 MP Quad Primary Cameras</option>
+                    <option value="50 MP + 50 MP + 50 MP Triple Primary Cameras">50 MP + 50 MP + 50 MP Triple Primary Cameras</option>
+                    <option value="50 MP + 0.08 MP Dual Primary Cameras">50 MP + 0.08 MP Dual Primary Cameras</option>
+                    <option value="50 MP + 2 MP + 0.08 MP Triple Primary Cameras">50 MP + 2 MP + 0.08 MP Triple Primary Cameras</option>
+                    <option value="48 MP + 8 MP + 2 MP Triple Primary Cameras">48 MP + 8 MP + 2 MP Triple Primary Cameras</option>
+                    <option value="8 MP + 0.08 MP Dual Primary Cameras">8 MP + 0.08 MP Dual Primary Cameras</option>
+                    <option value="200 + 12 + 10 + 50 MP Quad Primary Cameras">200 + 12 + 10 + 50 MP Quad Primary Cameras</option>
+                    <option value="50 MP + 12 MP + 5 MP Triple Primary Cameras">50 MP + 12 MP + 5 MP Triple Primary Cameras</option>
+                    <option value="50 MP + 8 MP + 5 MP Triple Primary Cameras">50 MP + 8 MP + 5 MP Triple Primary Cameras</option>
+                    <option value="50 MP + 5 MP + 2 MP Triple Primary Cameras">50 MP + 5 MP + 2 MP Triple Primary Cameras</option>
+                    <option value="50 MP + 12 MP + 10 MP Triple Primary Cameras">50 MP + 12 MP + 10 MP Triple Primary Cameras</option>
+                    <option value="50 MP + 5 MP + 2 MP Triple Primary Cameras">50 MP + 5 MP + 2 MP Triple Primary Cameras</option>
+                    <option value="50 MP + 12 MP + 8 MP Triple Primary Cameras">50 MP + 12 MP + 8 MP Triple Primary Cameras</option>
+                    <option value="50 MP + 50 MP + 64 MP Triple Primary Cameras">50 MP + 50 MP + 64 MP Triple Primary Cameras</option>
+                    <option value="48 MP + 12 MP + 12 MP Triple Primary Cameras">48 MP + 12 MP + 12 MP Triple Primary Cameras</option>
+                    <option value="48 MP + 12 MP Dual Primary Cameras">48 MP + 12 MP Dual Primary Cameras</option>
+                    <option value="12 MP + 12 MP Dual Primary Cameras">12 MP + 12 MP Dual Primary Cameras</option>
+                    <option value="48 MP + 12 MP Dual Primary Cameras">48 MP + 12 MP Dual Primary Cameras</option>
+                    <option value="12 MP + 12 MP + 12 MP Triple Primary Cameras">12 MP + 12 MP + 12 MP Triple Primary Cameras</option>
+                    <option value="12 MP Single Primary Camera">12 MP Single Primary Camera</option>
+                    <option value="12 MP + 12 MP Dual Primary Cameras">12 MP + 12 MP Dual Primary Cameras</option>
+                    <option value="48 MP + 12 MP + 12 MP Triple Primary Cameras">48 MP + 12 MP + 12 MP Triple Primary Cameras</option>
+                </select>
+            </div>           
+
+            <div class="form-group">
+                <label for="Core">Core:</label>
+                <select name="Core" id="Core">
+                    <option disabled selected value="">Select</option>
+                    <option value="Octa core (2.63 GHz, Single Core + 2.4 GHz, Tri core + 1.8 GHz, Quad core)">Octa core (2.63 GHz, Single Core + 2.4 GHz, Tri core + 1.8 GHz, Quad core)</option>
+                    <option value="Octa core (3.2 GHz, Single Core + 2.8 GHz, Quad core + 2 GHz, Tri core)">Octa core (3.2 GHz, Single Core + 2.8 GHz, Quad core + 2 GHz, Tri core)</option>
+                    <option value="Octa core (2.2 GHz, Dual Core + 1.7 GHz, Hexa Core)">Octa core (2.2 GHz, Dual Core + 1.7 GHz, Hexa Core)</option>
+                    <option value="Octa core (3.3 GHz, Single Core + 3.2 GHz, Penta Core + 2.3 GHz, Dual core)">Octa core (3.3 GHz, Single Core + 3.2 GHz, Penta Core + 2.3 GHz, Dual core)</option>
+                    <option value="Octa core (2.7 GHz, Single Core + 2.2 GHz, Tri core + 1.9 GHz, Quad core)">Octa core (2.7 GHz, Single Core + 2.2 GHz, Tri core + 1.9 GHz, Quad core)</option>
+                    <option value="Octa core (3.2 GHz, Single Core + 2.75 GHz, Tri core + 2 GHz, Quad core)">Octa core (3.2 GHz, Single Core + 2.75 GHz, Tri core + 2 GHz, Quad core)</option>
+                    <option value="Octa core (3.05 GHz, Single Core + 2.85 GHz, Tri core + 1.8 GHz, Quad core)">Octa core (3.05 GHz, Single Core + 2.85 GHz, Tri core + 1.8 GHz, Quad core)</option>
+                    <option value="Octa core (3 GHz, Single Core + 2.6 GHz, Tri core + 2 GHz, Quad core)">Octa core (3 GHz, Single Core + 2.6 GHz, Tri core + 2 GHz, Quad core)</option>
+                    <option value="Octa core (3 GHz, Single Core + 2.5 GHz, Tri core + 1.8 GHz, Quad core)">Octa core (3 GHz, Single Core + 2.5 GHz, Tri core + 1.8 GHz, Quad core)</option>
+                    <option value="Octa core (2.85 GHz, Quad Core + 2 GHz, Quad core)">Octa core (2.85 GHz, Quad Core + 2 GHz, Quad core)</option>
+                    <option value="Octa core (3.2 GHz, Single Core + 2.42 GHz, Tri core + 1.8 GHz, Quad core)">Octa core (3.2 GHz, Single Core + 2.42 GHz, Tri core + 1.8 GHz, Quad core)</option>
+                    <option value="Octa core (2.4 GHz, Dual Core + 2 GHz, Hexa Core)">Octa core (2.4 GHz, Dual Core + 2 GHz, Hexa Core)</option>
+                    <option value="Octa core (2.6 GHz, Dual Core + 2 GHz, Hexa Core)">Octa core (2.6 GHz, Dual Core + 2 GHz, Hexa Core)</option>
+                    <option value="Octa core (2.4 GHz, Quad Core + 1.95 GHz, Quad core)">Octa core (2.4 GHz, Quad Core + 1.95 GHz, Quad core)</option>
+                    <option value="Octa core (2.2 GHz, Quad Core + 1.8 GHz, Quad core)">Octa core (2.2 GHz, Quad Core + 1.8 GHz, Quad core)</option>
+                    <option value="Octa core (1.8 GHz, Dual Core + 1.8 GHz, Hexa Core)">Octa core (1.8 GHz, Dual Core + 1.8 GHz, Hexa Core)</option>
+                    <option value="Octa core (3.3 GHz, Single Core + 3.2 GHz, Tri core + 3 GHz, Dual core + 2.3 GHz, Dual core)">Octa core (3.3 GHz, Single Core + 3.2 GHz, Tri core + 3 GHz, Dual core + 2.3 GHz, Dual core)</option>
+                    <option value="Octa core (2.8 GHz, Dual Core + 2 GHz, Hexa Core)">Octa core (2.8 GHz, Dual Core + 2 GHz, Hexa Core)</option>
+                    <option value="Octa core (2 GHz, Dual Core + 1.8 GHz, Hexa Core)">Octa core (2 GHz, Dual Core + 1.8 GHz, Hexa Core)</option>
+                    <option value="Octa core (2.8 GHz, Quad Core + 1.9 GHz, Quad core)">Octa core (2.8 GHz, Quad Core + 1.9 GHz, Quad core)</option>
+                    <option value="Octa core (2.4 GHz, Single Core + 2.36 GHz, Tri core + 1.8 GHz, Quad core)">Octa core (2.4 GHz, Single Core + 2.36 GHz, Tri core + 1.8 GHz, Quad core)</option>
+                    <option value="Octa core (3.39 GHz, Single Core + 3.1 GHz, Tri core + 2.9 GHz, Dual core + 2.2 GHz, Dual core)">Octa core (3.39 GHz, Single Core + 3.1 GHz, Tri core + 2.9 GHz, Dual core + 2.2 GHz, Dual core)</option>
+                    <option value="Octa core (2.75 GHz, Quad Core + 2 GHz, Quad core)">Octa core (2.75 GHz, Quad Core + 2 GHz, Quad core)</option>
+                    <option value="Octa core (2.4 GHz, Quad Core + 2 GHz, Quad core)">Octa core (2.4 GHz, Quad Core + 2 GHz, Quad core)</option>
+                    <option value="Octa core (Deca Core (3.2 GHz, Single Core + 2.9 GHz, Dual core + 2.6 GHz, Tri core + 1.95 GHz, Quad core)">Deca Core (3.2 GHz, Single Core + 2.9 GHz, Dual core + 2.6 GHz, Tri core + 1.95 GHz, Quad core)</option>
+                    <option value="Octa core (2.8 GHz, Single Core + 2.5 GHz, Tri core + 1.8 GHz, Quad core)">Octa core (2.8 GHz, Single Core + 2.5 GHz, Tri core + 1.8 GHz, Quad core)</option>
+                    <option value="Octa core (3.36 GHz, Single Core + 2.8 GHz, Quad core + 2 GHz, Tri core)">Octa core (3.36 GHz, Single Core + 2.8 GHz, Quad core + 2 GHz, Tri core)</option>
+                    <option value="Octa core (3 GHz, Single Core + 2.4 GHz, Tri core + 1.7 GHz, Quad core)">Octa core (3 GHz, Single Core + 2.4 GHz, Tri core + 1.7 GHz, Quad core)</option>
+                    <option value="Octa core (2.91 GHz, Single Core + 2.81 GHz, Tri core + 2.2 GHz, Quad core)">Octa core (2.91 GHz, Single Core + 2.81 GHz, Tri core + 2.2 GHz, Quad core)</option>
+                    <option value="Octa core (2.2 GHz, Dual Core + 1.9 GHz, Hexa Core)">Octa core (2.2 GHz, Dual Core + 1.9 GHz, Hexa Core)</option>
+                    <option value="Octa core (3.1 GHz, Single Core + 3 GHz, Tri core + 2 GHz, Quad core)">Octa core (3.1 GHz, Single Core + 3 GHz, Tri core + 2 GHz, Quad core)</option>
+                    <option value="Octa core (2.2 GHz, Dual Core + 2 GHz, Hexa Core + Quad core)">Octa core (2.2 GHz, Dual Core + 2 GHz, Hexa Core + Quad core)</option>
+                    <option value="Octa core (2.2 GHz, Dual Core + 1.8 GHz, Hexa Core + Quad core)">Octa core (2.2 GHz, Dual Core + 1.8 GHz, Hexa Core + Quad core)</option>
+                    <option value="Octa core (2.2 GHz, Dual Core + 1.95 GHz, Hexa Core)">Octa core (2.2 GHz, Dual Core + 1.95 GHz, Hexa Core)</option>
+                    <option value="Octa core (2.1 GHz, Quad Core + 1.7 GHz, Quad core)">Octa core (2.1 GHz, Quad Core + 1.7 GHz, Quad core)</option>
+                    <option value="Octa core (3 GHz, Single Core + 2.5 GHz, Tri core + 2 GHz, Quad core)">Octa core (3 GHz, Single Core + 2.5 GHz, Tri core + 2 GHz, Quad core)</option>
+                    <option value="Octa core (3.19 GHz, Single Core + 2.42 GHz, Tri core + 1.8 GHz, Quad core)">Octa core (3.19 GHz, Single Core + 2.42 GHz, Tri core + 1.8 GHz, Quad core)</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="DisplaySize">Display Size:</label>
+                <select name="DisplaySize" id="DisplaySize">
+                    <option disabled selected value="">Select</option>
+                    <option value="6.7 inches (17.02 cm)">6.7 inches (17.02 cm)</option>
+                    <option value="6.78 inches (17.22 cm)">6.78 inches (17.22 cm)</option>
+                    <option value="6.72 inches (17.07 cm)">6.72 inches (17.07 cm)</option>
+                    <option value="6.82 inches (17.32 cm)">6.82 inches (17.32 cm)</option>
+                    <option value="6.74 inches (17.12 cm)">6.74 inches (17.12 cm)</option>
+                    <option value="7.82 inches (19.86 cm)">7.82 inches (19.86 cm)</option>
+                    <option value="6.43 inches (16.33 cm)">6.43 inches (16.33 cm)</option>
+                    <option value="6.59 inches (16.74 cm)">6.59 inches (16.74 cm)</option>
+                    <option value="6.55 inches (16.64 cm)">6.55 inches (16.64 cm)</option>
+                    <option value="6.67 inches (16.94 cm)">6.67 inches (16.94 cm)</option>
+                    <option value="6.79 inches (17.25 cm)">6.79 inches (17.25 cm)</option>
+                    <option value="6.73 inches (17.09 cm)">6.73 inches (17.09 cm)</option>
+                    <option value="6.36 inches (16.15 cm)">6.36 inches (16.15 cm)</option>
+                    <option value="6.71 inches (17.04 cm)">6.71 inches (17.04 cm)</option>
+                    <option value="6.6 inches (16.76 cm)">6.6 inches (16.76 cm)</option>
+                    <option value="6.5 inches (16.51 cm)">6.5 inches (16.51 cm)</option>
+                    <option value="6.4 inches (16.26 cm)">6.4 inches (16.26 cm)</option>
+                    <option value="6.2 inches (15.75 cm)">6.2 inches (15.75 cm)</option>
+                    <option value="6.1 inches (15.49 cm)">6.1 inches (15.49 cm)</option>
+                    <option value="4.7 inches (11.94 cm)">4.7 inches (11.94 cm)</option>
+                    <option value="5.4 inches (13.72 cm)">5.4 inches (13.72 cm)</option>
+                    <option value="6.58 inches (16.71 cm)">6.58 inches (16.71 cm)</option>
+                    <option value="6.38 inches (16.21 cm)">6.38 inches (16.21 cm)</option>
+                    <option value="6.56 inches (16.66 cm)">6.56 inches (16.66 cm)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="DisplayType">Display Type:</label>
+                <select name="DisplayType" id="DisplayType">
+                    <option disabled selected value="">Select</option>
+                    <option value="FHD+, AMOLED">FHD+, AMOLED</option>
+                    <option value="FHD+, IPS LCD">FHD+, IPS LCD</option>
+                    <option value="QHD+, AMOLED">QHD+, AMOLED</option>
+                    <option value="FHD+, Fluid AMOLED">FHD+, Fluid AMOLED</option>
+                    <option value="FHD+, Super Fluid AMOLED">FHD+, Super Fluid AMOLED</option>
+                    <option value="QHD+, Super Fluid AMOLED">QHD+, Super Fluid AMOLED</option>
+                    <option value="2268x2440 px, LTPO Flexi-fluid AMOLED">2268x2440 px, LTPO Flexi-fluid AMOLED</option>
+                    <option value="QHD+, Fluid AMOLED">QHD+, Fluid AMOLED</option>
+                    <option value="FHD+, Super AMOLED">FHD+, Super AMOLED</option>
+                    <option value="FHD+, OLED">FHD+, OLED</option>
+                    <option value="HD+, IPS LCD">HD+, IPS LCD</option>
+                    <option value="FHD+, LTPO AMOLED">FHD+, LTPO AMOLED</option>
+                    <option value="FHD+, Super AMOLED Plus">FHD+, Super AMOLED Plus</option>
+                    <option value="QHD+, Dynamic AMOLED 2x">QHD+, Dynamic AMOLED 2x</option>
+                    <option value="FHD+, Dynamic AMOLED 2x">FHD+, Dynamic AMOLED 2x</option>
+                    <option value="FHD+, PLS LCD">FHD+, PLS LCD</option>
+                </select>
+            </div>            
+
+            <div class="form-group">
+                <label for="FlashType">Flash Type:</label>
+                <select name="Flash Type" id="FlashType">
+                    <option disabled selected value="">Select</option>
+                    <option value="Dual LED Flash">Dual LED Flash</option>
+                    <option value="LED Flash">LED Flash</option>
+                    <option value="Dual-color LED Flash">Dual-color LED Flash</option>
+                    <option value="Smart Aura Light">Smart Aura Light</option>
+                    <option value="LED Flash + Aura Light">LED Flash + Aura Light</option>
+                    <option value="Ring LED">Ring LED</option>
+                    <option value="Quad LED True Tone Flash">Quad LED True Tone Flash</option>
+                    <option value="Quad LED Flash">Quad LED Flash</option>
+                </select>
+            </div>
+            
             <div style="width: 100%;">
                 <input type="submit" value="Submit">
             </div>

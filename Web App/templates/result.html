@@ -7,100 +7,117 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='result.css') }}">
 </head>
 <body>
+
+    
     <div class="container">
         
-            
-                <div class="side">
-                    <div style="margin-right: 15px;">
-                        <div class="header">
-                            <h1>Recommended Mobile</h1>
-                            {% if mobile %}
-                                <h2>{{ mobile['Name'] }}</h2>
+        <div class="side">
+        
+            <div style="margin-right: 15px;">
+                <div class="header">
+                    {% if mobile %}
+                        <h1>Recommended Mobile</h1>
+                        <h2>{{ mobile['Name'] }}</h2>
+                    {% elif message %}
+                        <h2 style="color: red;"><i>{{ message }}</i></h2>
+                        <div style="text-align: center; margin: 20px;">
+                            <form action="{{ url_for('home') }}">
+                                <button class="but1" type="submit">Back to Home</button>
+                            </form>
                         </div>
-                    
-                        <div class="ratings">
-                            <div style="display: flex; justify-content: center;">
-                                <div class="rating">
-                                    <img src="https://play-lh.googleusercontent.com/YjO3MoN7jv4_OLJGzR4tiekDuJD5Hu-U7D5JTKPz_KdLb2dirsVt3KTKBe2gZpRFtR8" alt="91 Mobiles Rating">
-                                    <h3>91 Mobiles <br>Rating :</h3>
-                                    <p>{{ mobile['91 mobiles rating'] }}</p>
-                                </div>
-                                <div class="rating">
-                                    <img src="https://thumbs.dreamstime.com/b/youtube-new-155631998.jpg" alt="YouTube Rating" >
-                                    <h3>Youtube <br>Rating :</h3>
-                                    <p>{{ mobile['Youtube Rating'] }}</p>
-                            </div>
-                            </div>
-                            <div class="rating">
-                                <h3>Final Rating :</h3>
-                                <p>{{ mobile['Final Rating'] }}</p>
-                            </div>
+                    {% endif %}
+                </div>
+                
+                {% if mobile %}
+                <div class="ratings">
+                    <div style="display: flex; justify-content: center;">
+                        <div class="rating">
+                            <img src="https://play-lh.googleusercontent.com/YjO3MoN7jv4_OLJGzR4tiekDuJD5Hu-U7D5JTKPz_KdLb2dirsVt3KTKBe2gZpRFtR8" alt="91 Mobiles Rating">
+                            <h3>91 Mobiles <br>Rating :</h3>
+                            <p>{{ mobile['91 mobiles rating'] }}</p>
+                        </div>
+                        <div class="rating">
+                            <img src="https://thumbs.dreamstime.com/b/youtube-new-155631998.jpg" alt="YouTube Rating">
+                            <h3>Youtube <br>Rating :</h3>
+                            <p>{{ mobile['Youtube Rating'] }}</p>
                         </div>
                     </div>
-                    <div class="specs">
-                        <table>
-                            <tr>
-                                <th>OS</th>
-                                <td>{{ mobile['OS'] }}</td>
-                            </tr>
-                            <tr>
-                                <th>Brand</th>
-                                <td>{{ mobile['Brand'] }}</td>
-                            </tr>
-                            <tr>
-                                <th>Core</th>
-                                <td>{{ mobile['Core'] }}</td>
-                            </tr>
-                            <tr>
-                                <th>Processor</th>
-                                <td>{{ mobile['Processor'] }}</td>
-                            </tr>
-                            <tr>
-                                <th>Display Type</th>
-                                <td>{{ mobile['Display Type'] }}</td>
-                            </tr>
-                            <tr>
-                                <th>Display Size</th>
-                                <td>{{ mobile['Display Size'] }}</td>
-                            </tr>
-                            <tr>
-                                <th>Camera Details</th>
-                                <td>{{ mobile['Camera Details'] }}</td>
-                            </tr>
-                            <tr>
-                                <th>Flash Type</th>
-                                <td>{{ mobile['Flash Type'] }}</td>
-                            </tr>
-                            <tr>
-                                <th>Screen Flash</th>
-                                <td>{{ mobile['Screen flash'] }}</td>
-                            </tr>
-                            <tr>
-                                <th>Fast Charging</th>
-                                <td>{{ mobile['Fast charging'] }}</td>
-                            </tr>
-                            <tr>
-                                <th>Type-C</th>
-                                <td>{{ mobile['Type-C'] }}</td>
-                            </tr>
-                            <tr>
-                                <th>Price</th>
-                                <td>{{ mobile['Price'] }}</td>
-                            </tr>
-                            <tr>
-                                <th>Battery</th>
-                                <td>{{ mobile['Battery'] }}</td>
-                            </tr>
-                            <tr>
-                                <th>Refresh Rate</th>
-                                <td>{{ mobile['Refresh Rate'] }}</td>
-                            </tr>
-                            <tr>
-                                <th>RAM</th>
-                                <td>{{ mobile['RAM'] }}</td>
-                            </tr>
-                        </table>
+                    <div class="rating">
+                        <h3>Final Rating :</h3>
+                        <p>{{ mobile['Final Rating'] }}</p>
                     </div>
+                </div>
+
+                <div style="text-align: center; margin: 20px;">
+                    <form action="{{ url_for('home') }}">
+                        <button class="but1" type="submit">Back to Home</button>
+                    </form>
+                </div>
+            </div>
+            <div class="specs">
+                <table>
+                    <tr>
+                        <th>OS</th>
+                        <td>{{ mobile['OS'] }}</td>
+                    </tr>
+                    <tr>
+                        <th>Brand</th>
+                        <td>{{ mobile['Brand'] }}</td>
+                    </tr>
+                    <tr>
+                        <th>Core</th>
+                        <td>{{ mobile['Core'] }}</td>
+                    </tr>
+                    <tr>
+                        <th>Processor</th>
+                        <td>{{ mobile['Processor'] }}</td>
+                    </tr>
+                    <tr>
+                        <th>Display Type</th>
+                        <td>{{ mobile['Display Type'] }}</td>
+                    </tr>
+                    <tr>
+                        <th>Display Size</th>
+                        <td>{{ mobile['Display Size'] }}</td>
+                    </tr>
+                    <tr>
+                        <th>Camera Details</th>
+                        <td>{{ mobile['Camera Details'] }}</td>
+                    </tr>
+                    <tr>
+                        <th>Flash Type</th>
+                        <td>{{ mobile['Flash Type'] }}</td>
+                    </tr>
+                    <tr>
+                        <th>Screen Flash</th>
+                        <td>{{ mobile['Screen flash'] }}</td>
+                    </tr>
+                    <tr>
+                        <th>Fast Charging</th>
+                        <td>{{ mobile['Fast charging'] }}</td>
+                    </tr>
+                    <tr>
+                        <th>Type-C</th>
+                        <td>{{ mobile['Type-C'] }}</td>
+                    </tr>
+                    <tr>
+                        <th>Price</th>
+                        <td>{{ mobile['Price'] }}</td>
+                    </tr>
+                    <tr>
+                        <th>Battery</th>
+                        <td>{{ mobile['Battery'] }}</td>
+                    </tr>
+                    <tr>
+                        <th>Refresh Rate</th>
+                        <td>{{ mobile['Refresh Rate'] }}</td>
+                    </tr>
+                    <tr>
+                        <th>RAM</th>
+                        <td>{{ mobile['RAM'] }}</td>
+                    </tr>
+                </table>
+            </div>
             {% endif %}
         </div>
         </div>
