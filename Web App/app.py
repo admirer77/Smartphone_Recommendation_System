@@ -30,7 +30,7 @@ def predict():
     # Filter the dataset based on the provided inputs
     filtered_data = data.copy()
 
-    filter_columns = ['os', 'OS', 'Brand', 'Core', 'Processor', 'Display Type', 'Display Size', 'Camera Details', "Flash Type", "Screen flash", "Fast charging", "Type-C"]
+    filter_columns = ['os', 'OS', 'Brand', 'Core', 'Processor', 'Camera Details', 'Display Type', 'Display Size', "Flash Type", "Screen flash", "Fast charging", "Type-C"]
     for col in filter_columns:
         if user_input.get(col):
             filtered_data = filtered_data[filtered_data[col] == user_input[col]]

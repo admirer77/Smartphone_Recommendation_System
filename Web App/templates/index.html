@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mobile Recommendation</title>
+    <title>Smartphone Recommendation System - Home</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
 </head>
 <body>
     <div>
-        <h1>Mobile Specification Input</h1>
+        <h1>Smartphone Recommendation System</h1>
         <form action="/predict" method="post">
 
             <div class="form-group">
@@ -150,53 +150,7 @@
                 <input type="number" name="Refresh Rate" id="RefreshRate">
             </div>
 
-            <div class="form-group">
-                <label for="CameraDetails">Camera Details:</label>
-                <select name="CameraDetails" id="CameraDetails">
-                    <option disabled selected value="">Select</option>
-                    <option value="50 MP + 8 MP Dual Primary Cameras">50 MP + 8 MP Dual Primary Cameras</option>
-                    <option value="50 MP + 8 MP + 2 MP Triple Primary Cameras">50 MP + 8 MP + 2 MP Triple Primary Cameras</option>
-                    <option value="108 MP + 2 MP + 2 MP Triple Primary Cameras">108 MP + 2 MP + 2 MP Triple Primary Cameras</option>
-                    <option value="50 MP + 48 MP + 64 MP Triple Primary Cameras">50 MP + 48 MP + 64 MP Triple Primary Cameras</option>
-                    <option value="50 MP + 48 MP + 32 MP Triple Primary Cameras">50 MP + 48 MP + 32 MP Triple Primary Cameras</option>
-                    <option value="48 MP + 48 MP + 64 MP Triple Primary Cameras">48 MP + 48 MP + 64 MP Triple Primary Cameras</option>
-                    <option value="64 MP + 2 MP + 2 MP Triple Primary Cameras">64 MP + 2 MP + 2 MP Triple Primary Cameras</option>
-                    <option value="48 MP + 50 MP + 8 MP Triple Primary Cameras">48 MP + 50 MP + 8 MP Triple Primary Cameras</option>
-                    <option value="48 + 16 + 5 + 2 MP Quad Primary Cameras">48 + 16 + 5 + 2 MP Quad Primary Cameras</option>
-                    <option value="64 MP + 8 MP + 2 MP Triple Primary Cameras">64 MP + 8 MP + 2 MP Triple Primary Cameras</option>
-                    <option value="50 MP + 2 MP Dual Primary Cameras">50 MP + 2 MP Dual Primary Cameras</option>
-                    <option value="50 MP + 8 MP + 64 MP Triple Primary Cameras">50 MP + 8 MP + 64 MP Triple Primary Cameras</option>
-                    <option value="50 MP + 8 MP + 32 MP Triple Primary Cameras">50 MP + 8 MP + 32 MP Triple Primary Cameras</option>
-                    <option value="50 MP Dual Primary Cameras">50 MP Dual Primary Cameras</option>
-                    <option value="64 MP + 2 MP Dual Primary Cameras">64 MP + 2 MP Dual Primary Cameras</option>
-                    <option value="108 MP Dual Primary Cameras">108 MP Dual Primary Cameras</option>
-                    <option value="100 MP + 2 MP Dual Primary Cameras">100 MP + 2 MP Dual Primary Cameras</option>
-                    <option value="200 MP + 8 MP + 2 MP Triple Primary Cameras">200 MP + 8 MP + 2 MP Triple Primary Cameras</option>
-                    <option value="108 MP + 8 MP + 2 MP Triple Primary Cameras">108 MP + 8 MP + 2 MP Triple Primary Cameras</option>
-                    <option value="50 + 50 + 50 + 50 MP Quad Primary Cameras">50 + 50 + 50 + 50 MP Quad Primary Cameras</option>
-                    <option value="50 MP + 50 MP + 50 MP Triple Primary Cameras">50 MP + 50 MP + 50 MP Triple Primary Cameras</option>
-                    <option value="50 MP + 0.08 MP Dual Primary Cameras">50 MP + 0.08 MP Dual Primary Cameras</option>
-                    <option value="50 MP + 2 MP + 0.08 MP Triple Primary Cameras">50 MP + 2 MP + 0.08 MP Triple Primary Cameras</option>
-                    <option value="48 MP + 8 MP + 2 MP Triple Primary Cameras">48 MP + 8 MP + 2 MP Triple Primary Cameras</option>
-                    <option value="8 MP + 0.08 MP Dual Primary Cameras">8 MP + 0.08 MP Dual Primary Cameras</option>
-                    <option value="200 + 12 + 10 + 50 MP Quad Primary Cameras">200 + 12 + 10 + 50 MP Quad Primary Cameras</option>
-                    <option value="50 MP + 12 MP + 5 MP Triple Primary Cameras">50 MP + 12 MP + 5 MP Triple Primary Cameras</option>
-                    <option value="50 MP + 8 MP + 5 MP Triple Primary Cameras">50 MP + 8 MP + 5 MP Triple Primary Cameras</option>
-                    <option value="50 MP + 5 MP + 2 MP Triple Primary Cameras">50 MP + 5 MP + 2 MP Triple Primary Cameras</option>
-                    <option value="50 MP + 12 MP + 10 MP Triple Primary Cameras">50 MP + 12 MP + 10 MP Triple Primary Cameras</option>
-                    <option value="50 MP + 5 MP + 2 MP Triple Primary Cameras">50 MP + 5 MP + 2 MP Triple Primary Cameras</option>
-                    <option value="50 MP + 12 MP + 8 MP Triple Primary Cameras">50 MP + 12 MP + 8 MP Triple Primary Cameras</option>
-                    <option value="50 MP + 50 MP + 64 MP Triple Primary Cameras">50 MP + 50 MP + 64 MP Triple Primary Cameras</option>
-                    <option value="48 MP + 12 MP + 12 MP Triple Primary Cameras">48 MP + 12 MP + 12 MP Triple Primary Cameras</option>
-                    <option value="48 MP + 12 MP Dual Primary Cameras">48 MP + 12 MP Dual Primary Cameras</option>
-                    <option value="12 MP + 12 MP Dual Primary Cameras">12 MP + 12 MP Dual Primary Cameras</option>
-                    <option value="48 MP + 12 MP Dual Primary Cameras">48 MP + 12 MP Dual Primary Cameras</option>
-                    <option value="12 MP + 12 MP + 12 MP Triple Primary Cameras">12 MP + 12 MP + 12 MP Triple Primary Cameras</option>
-                    <option value="12 MP Single Primary Camera">12 MP Single Primary Camera</option>
-                    <option value="12 MP + 12 MP Dual Primary Cameras">12 MP + 12 MP Dual Primary Cameras</option>
-                    <option value="48 MP + 12 MP + 12 MP Triple Primary Cameras">48 MP + 12 MP + 12 MP Triple Primary Cameras</option>
-                </select>
-            </div>           
+        
 
             <div class="form-group">
                 <label for="Core">Core:</label>
@@ -243,74 +197,9 @@
             </div>
 
 
-            <div class="form-group">
-                <label for="DisplaySize">Display Size:</label>
-                <select name="DisplaySize" id="DisplaySize">
-                    <option disabled selected value="">Select</option>
-                    <option value="6.7 inches (17.02 cm)">6.7 inches (17.02 cm)</option>
-                    <option value="6.78 inches (17.22 cm)">6.78 inches (17.22 cm)</option>
-                    <option value="6.72 inches (17.07 cm)">6.72 inches (17.07 cm)</option>
-                    <option value="6.82 inches (17.32 cm)">6.82 inches (17.32 cm)</option>
-                    <option value="6.74 inches (17.12 cm)">6.74 inches (17.12 cm)</option>
-                    <option value="7.82 inches (19.86 cm)">7.82 inches (19.86 cm)</option>
-                    <option value="6.43 inches (16.33 cm)">6.43 inches (16.33 cm)</option>
-                    <option value="6.59 inches (16.74 cm)">6.59 inches (16.74 cm)</option>
-                    <option value="6.55 inches (16.64 cm)">6.55 inches (16.64 cm)</option>
-                    <option value="6.67 inches (16.94 cm)">6.67 inches (16.94 cm)</option>
-                    <option value="6.79 inches (17.25 cm)">6.79 inches (17.25 cm)</option>
-                    <option value="6.73 inches (17.09 cm)">6.73 inches (17.09 cm)</option>
-                    <option value="6.36 inches (16.15 cm)">6.36 inches (16.15 cm)</option>
-                    <option value="6.71 inches (17.04 cm)">6.71 inches (17.04 cm)</option>
-                    <option value="6.6 inches (16.76 cm)">6.6 inches (16.76 cm)</option>
-                    <option value="6.5 inches (16.51 cm)">6.5 inches (16.51 cm)</option>
-                    <option value="6.4 inches (16.26 cm)">6.4 inches (16.26 cm)</option>
-                    <option value="6.2 inches (15.75 cm)">6.2 inches (15.75 cm)</option>
-                    <option value="6.1 inches (15.49 cm)">6.1 inches (15.49 cm)</option>
-                    <option value="4.7 inches (11.94 cm)">4.7 inches (11.94 cm)</option>
-                    <option value="5.4 inches (13.72 cm)">5.4 inches (13.72 cm)</option>
-                    <option value="6.58 inches (16.71 cm)">6.58 inches (16.71 cm)</option>
-                    <option value="6.38 inches (16.21 cm)">6.38 inches (16.21 cm)</option>
-                    <option value="6.56 inches (16.66 cm)">6.56 inches (16.66 cm)</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="DisplayType">Display Type:</label>
-                <select name="DisplayType" id="DisplayType">
-                    <option disabled selected value="">Select</option>
-                    <option value="FHD+, AMOLED">FHD+, AMOLED</option>
-                    <option value="FHD+, IPS LCD">FHD+, IPS LCD</option>
-                    <option value="QHD+, AMOLED">QHD+, AMOLED</option>
-                    <option value="FHD+, Fluid AMOLED">FHD+, Fluid AMOLED</option>
-                    <option value="FHD+, Super Fluid AMOLED">FHD+, Super Fluid AMOLED</option>
-                    <option value="QHD+, Super Fluid AMOLED">QHD+, Super Fluid AMOLED</option>
-                    <option value="2268x2440 px, LTPO Flexi-fluid AMOLED">2268x2440 px, LTPO Flexi-fluid AMOLED</option>
-                    <option value="QHD+, Fluid AMOLED">QHD+, Fluid AMOLED</option>
-                    <option value="FHD+, Super AMOLED">FHD+, Super AMOLED</option>
-                    <option value="FHD+, OLED">FHD+, OLED</option>
-                    <option value="HD+, IPS LCD">HD+, IPS LCD</option>
-                    <option value="FHD+, LTPO AMOLED">FHD+, LTPO AMOLED</option>
-                    <option value="FHD+, Super AMOLED Plus">FHD+, Super AMOLED Plus</option>
-                    <option value="QHD+, Dynamic AMOLED 2x">QHD+, Dynamic AMOLED 2x</option>
-                    <option value="FHD+, Dynamic AMOLED 2x">FHD+, Dynamic AMOLED 2x</option>
-                    <option value="FHD+, PLS LCD">FHD+, PLS LCD</option>
-                </select>
-            </div>            
+        
+                 
 
-            <div class="form-group">
-                <label for="FlashType">Flash Type:</label>
-                <select name="Flash Type" id="FlashType">
-                    <option disabled selected value="">Select</option>
-                    <option value="Dual LED Flash">Dual LED Flash</option>
-                    <option value="LED Flash">LED Flash</option>
-                    <option value="Dual-color LED Flash">Dual-color LED Flash</option>
-                    <option value="Smart Aura Light">Smart Aura Light</option>
-                    <option value="LED Flash + Aura Light">LED Flash + Aura Light</option>
-                    <option value="Ring LED">Ring LED</option>
-                    <option value="Quad LED True Tone Flash">Quad LED True Tone Flash</option>
-                    <option value="Quad LED Flash">Quad LED Flash</option>
-                </select>
-            </div>
             
             <div style="width: 100%;">
                 <input type="submit" value="Submit">
