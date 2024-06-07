@@ -29,9 +29,9 @@ The data is preprocessed and used to train a Random Forest classification model 
 
 ## References
 
-* 91mobiles website (URL to be added)
-* YouTube Data API Documentation (URL to be added)
-* (Optional) OpenAI API Documentation (if used)
+* 91mobiles website
+* YouTube Data API Documentation
+* OpenAI
 
 ## How to Run the Project
 
