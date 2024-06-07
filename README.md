@@ -7,7 +7,7 @@ This project implements a smartphone recommendation system that utilizes data fr
 This system combines ratings from two sources:
 
 * **91mobiles:** Smartphone specifications and user ratings are collected through web scraping techniques from the 91mobiles website.
-* **YouTube:**  Views and likes for smartphone review videos are retrieved using the YouTube Data API.
+* **YouTube:**  Views and likes for smartphone review videos are retrieved using the YouTube Data API. And used it to display the youtube vedios in the webpage.
 
 The YouTube rating is calculated as `likes / views * 10`. To compensate for potential outliers, the difference between the highest YouTube rating and 10 is added to each YouTube rating.
 
