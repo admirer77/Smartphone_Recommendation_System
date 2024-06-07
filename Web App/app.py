@@ -1,13 +1,28 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, url_for
 import pandas as pd
 import joblib
+from googleapiclient.discovery import build
 
 # Load the dataset and the trained model
 data = pd.read_csv('Preprocessed_Final_Data.csv')
 model = joblib.load('random_forest_model.pkl')
 ratings = joblib.load('ratings.pkl')
 
+# Replace 'YOUR_API_KEY' with your actual YouTube API key
+API_KEY = 'AIzaSyBdLde5uSMyq0AnQU_6j8K-GE9rpwqTiog'
+youtube = build('youtube', 'v3', developerKey=API_KEY)
+
 app = Flask(__name__)
+
+def search_videos(query, max_results=5):
+    request = youtube.search().list(
+        part='snippet',
+        q=query,
+        type='video',
+        maxResults=max_results
+    )
+    response = request.execute()
+    return response['items']
 
 @app.route('/')
 def home():
@@ -42,7 +57,6 @@ def predict():
             tolerance = 0.1 * user_input[key]
             filtered_data = filtered_data[(filtered_data[key] >= user_input[key] - tolerance) & 
                                         (filtered_data[key] <= user_input[key] + tolerance)]
-
 
     # Debugging: Print the filtered data
     print("Filtered data:", filtered_data)
@@ -81,7 +95,11 @@ def predict():
 
     best_mobile_details = data[data["Name"] == best_mobile["Name"]].iloc[0].to_dict()
 
-    return render_template('result.html', mobile=best_mobile_details)
+    # Search for YouTube videos related to the best mobile
+    video_query = f"{best_mobile_details['Name']} review by prasad tech in telugu"
+    videos = search_videos(video_query)
+
+    return render_template('result.html', mobile=best_mobile_details, videos=videos)
 
 if __name__ == '__main__':
     app.run(debug=True)

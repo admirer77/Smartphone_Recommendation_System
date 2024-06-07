@@ -12,19 +12,18 @@
     <div class="container">
         
         <div class="side">
-        
+            
             <div style="margin-right: 15px;">
+                <div style="text-align: center; margin: 20px;">
+                    <form action="{{ url_for('home') }}">
+                        <button class="but1" type="submit">Back to Home</button>
+                    </form>
+                </div>
+
                 <div class="header">
                     {% if mobile %}
                         <h1>Recommended Mobile</h1>
                         <h2>{{ mobile['Name'] }}</h2>
-                    {% elif message %}
-                        <h2 style="color: red;"><i>{{ message }}</i></h2>
-                        <div style="text-align: center; margin: 20px;">
-                            <form action="{{ url_for('home') }}">
-                                <button class="but1" type="submit">Back to Home</button>
-                            </form>
-                        </div>
                     {% endif %}
                 </div>
                 
@@ -48,11 +47,7 @@
                     </div>
                 </div>
 
-                <div style="text-align: center; margin: 20px;">
-                    <form action="{{ url_for('home') }}">
-                        <button class="but1" type="submit">Back to Home</button>
-                    </form>
-                </div>
+                
             </div>
             <div class="specs">
                 <table>
@@ -120,7 +115,35 @@
             </div>
             {% endif %}
         </div>
+        {% if videos %}
+        <div class="specs" style="margin: 20px;">
+            
+                <h2>YouTube Review Video Links</h2>
+                <table >
+                    <thead>
+                        <tr>
+                            <th>Thumbnail</th>
+                            <th>Title</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for video in videos %}
+                            <tr>
+                                <td><img src="{{ video['snippet']['thumbnails']['default']['url'] }}" alt="{{ video['snippet']['title'] }}"></td>
+                                <td>{{ video['snippet']['title'] }}</td>
+                                <td ><a href="https://www.youtube.com/watch?v={{ video['id']['videoId'] }}" target="_blank" style="color: rgb(225, 141, 141);">Watch on YouTube</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            
         </div>
+        {% elif message %}
+            <h2 style="color: red;"><i>{{ message }}</i></h2>
+        {% endif %}
+        </div>
+        
     </div>
 </body>
 </html>
