@@ -9,7 +9,7 @@ model = joblib.load('random_forest_model.pkl')
 ratings = joblib.load('ratings.pkl')
 
 # Replace 'YOUR_API_KEY' with your actual YouTube API key
-API_KEY = 'AIzaSyBdLde5uSMyq0AnQU_6j8K-GE9rpwqTiog'
+API_KEY = 'xxx'
 youtube = build('youtube', 'v3', developerKey=API_KEY)
 
 app = Flask(__name__)
