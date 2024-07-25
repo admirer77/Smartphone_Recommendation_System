@@ -9,7 +9,7 @@ model = joblib.load('random_forest_model.pkl')
 ratings = joblib.load('ratings.pkl')
 
 # Replace 'YOUR_API_KEY' with your actual YouTube API key
-API_KEY = 'xxx'
+API_KEY = 'AIzaSyBdLde5uSMyq0AnQU_6j8K-GE9rpwqTiog'
 youtube = build('youtube', 'v3', developerKey=API_KEY)
 
 app = Flask(__name__)
@@ -96,7 +96,7 @@ def predict():
     best_mobile_details = data[data["Name"] == best_mobile["Name"]].iloc[0].to_dict()
 
     # Search for YouTube videos related to the best mobile
-    video_query = f"{best_mobile_details['Name']} review by prasad tech in telugu"
+    video_query = f"{best_mobile_details['Name']} review in telugu most viewed"
     videos = search_videos(video_query)
 
     return render_template('result.html', mobile=best_mobile_details, videos=videos)
