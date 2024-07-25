@@ -2,6 +2,8 @@
 
 This project implements a smartphone recommendation system that utilizes data from various sources to suggest the best phone based on user preferences.
 
+[Click to explore the blog for the process of building this project](https://nehanthadmirer.medium.com/building-a-smartphone-recommendation-system-harnessing-web-scraping-and-youtube-data-555c515c2b08)
+
 ## Project Description
 
 This system combines ratings from two sources:
